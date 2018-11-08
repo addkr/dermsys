@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      DermSys
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home" padding>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="ios-medkit-outline" item-left></ion-icon>
+      Nowe zapytanie
+    </ion-card-header>
+    <ion-list>
+      <button ion-item (click)="takePic()">
+        <ion-icon name="ios-camera" item-left></ion-icon>
+        Wykonaj zdjęcie
+      </button>
+      <img [src]="base64Image" *ngIf="base64Image" />
+      <ion-item>
+        <ion-label fixed>Wpisz objawy</ion-label>
+        <ion-input type="text" value="" id="objawy"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <button ion-item (click)="send()">
+    Wyślij
+  </button>
+
+</ion-content>

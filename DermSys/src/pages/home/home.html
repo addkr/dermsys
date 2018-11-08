@@ -1,0 +1,32 @@
+<ion-header >
+  <ion-navbar color="aqua">    
+    <ion-title>
+      DermSys
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home" padding>
+
+    <ion-card>
+      <ion-card-header>
+        Witaj w aplikacji DermSys
+      </ion-card-header>
+
+        <ion-list>
+            <button ion-item (click)="ask()">
+                <ion-icon name="create" item-left></ion-icon>
+                Nowe zapytanie
+            </button>
+
+            <button ion-item (click)="check()">
+                <ion-icon name="mail" item-left></ion-icon>
+                Sprawdź odpowiedzi
+            </button>
+            <img [src]="base64Image" *ngIf="base64Image" />
+         
+        </ion-list>
+        
+    </ion-card>
+
+</ion-content>
