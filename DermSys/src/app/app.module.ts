@@ -5,6 +5,11 @@ import { HomePage } from '../pages/home/home';
 import { Camera } from '@ionic-native/camera';
 import { QuestPage } from '../pages/quest/quest';
 import { AnswPage } from '../pages/answ/answ';
+import { DatePipe } from '@angular/common';
+import { LoadingController } from 'ionic-angular';
+import { File } from '@ionic-native/file';
+import { Geolocation } from '@ionic-native/geolocation';
+import { Toast } from '@ionic-native/toast';
 
 @NgModule({
   declarations: [
@@ -23,6 +28,6 @@ import { AnswPage } from '../pages/answ/answ';
     QuestPage,
     AnswPage
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }, Camera]
+  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }, Camera, DatePipe, LoadingController, Geolocation, Toast]
 })
 export class AppModule {}

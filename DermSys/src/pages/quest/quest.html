@@ -10,8 +10,7 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-icon name="ios-medkit-outline" item-left></ion-icon>
-      Nowe zapytanie
+      <ion-icon name="ios-medkit-outline" item-left color="primary"> Nowe zapytanie </ion-icon>      
     </ion-card-header>
     <ion-list>
       <button ion-item (click)="takePic()">
@@ -20,13 +19,13 @@
       </button>
       <img [src]="base64Image" *ngIf="base64Image" />
       <ion-item>
-        <ion-label fixed>Wpisz objawy</ion-label>
-        <ion-input type="text" value="" id="objawy"></ion-input>
+        <ion-input type="text" placeholder="Wpisz objawy" [(ngModel)]="userdata" ></ion-input>
       </ion-item>
+
     </ion-list>
   </ion-card>
-  <button ion-item (click)="send()">
-    Wyślij
+  <button ion-button block outline color="primary" (click)="send(userdata)">
+    Wyślij zapytanie
   </button>
 
 </ion-content>
